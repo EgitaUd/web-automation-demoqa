@@ -15,8 +15,8 @@ public class TextBoxPage extends ElementsPage {
   public static By TEXT_BOX_TITLE = text("Text Box");
   // Field that requires user to input Full name
   public static By FULL_NAME_FIELD = id("userName");
-  // Field that requires user to input Permatent address
-  public static By PERMANENT_ADDRESS_FIELD = xpath("//textarea[@id='permanentAddress']");
+  // Field that requires user to input Permanent address
+  public static By PERMANENT_ADDRESS_FIELD = text("Permanent Address");
 
   // After user clicks submit button, multiple paragraphs appear with the previously given information
   public static By NAME = css("p#name");
@@ -40,3 +40,4 @@ public class TextBoxPage extends ElementsPage {
     return true;
   }
 }
+
