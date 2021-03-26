@@ -12,19 +12,19 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("/select-menu")
 public class SelectMenuPage extends WidgetsPage{
   // Locators ----------------------------------------------------------------------------------------------------------
-  public static By SELECT_MENU_TITLE;
-  public static By SELECT_VALUE;
-  public static By SELECT_ONE;
-  public static By OLD_STYLE_SELECT_MENU;
-  public static By MULTISELECT_DROP_DOWN;
+  public static By SELECT_MENU_TITLE = text("Select Menu");
+  public static By SELECT_VALUE = css("#withOptGroup > div > div.css-1hwfws3");
+  public static By SELECT_ONE = css("#selectOne > div > div.css-1hwfws3");
+  public static By OLD_STYLE_SELECT_MENU = css("select[id='oldSelectMenu']");
+  public static By MULTISELECT_DROP_DOWN = css("#react-select-4-input");
   // Field containing selected values. Might need an xpath selector
-  public static By MULTISELECT_DROP_DOWN_VALUES;
-  public static By VOLVO;
-  public static By SAAB;
-  public static By OPEL;
-  public static By AUDI;
+  public static By MULTISELECT_DROP_DOWN_VALUES = css("#oldSelectMenu > option");
+  public static By VOLVO = css("option[value='volvo']");
+  public static By SAAB = css("option[value='saab']");
+  public static By OPEL = css("option[value='opel']");
+  public static By AUDI = css("option[value='audi']");
   // Selector that would allow to get either of given four car brands.
-  public static By CAR_MENU_OPTIONS;
+  public static By CAR_MENU_OPTIONS = xpath("//*[@id=\'cars\']");
   // Public methods ----------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {
     getElement(SELECT_MENU_TITLE).waitUntilPresent();

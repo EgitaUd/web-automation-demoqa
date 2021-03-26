@@ -21,7 +21,7 @@ public class CheckBoxPage extends ElementsPage {
   public static By CLASSIFIED = text("Classified");
   public static By EXCEL_FILE = text("Excel File.doc");
   // After user selects different options, a string is shown to user containing ALL the selected options.
-  public static By RESULT;
+  public static By RESULT = css("div[id='result']");
   // Public methods ----------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {
     getElement(CHECK_BOX_TITLE).waitUntilPresent();
