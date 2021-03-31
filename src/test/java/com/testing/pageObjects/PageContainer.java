@@ -40,6 +40,9 @@ public class PageContainer{
     pages.put("TOOL_TIPS_PAGE", new ToolTipsPage());
     pages.put("MENU_PAGE", new MenuPage());
     pages.put("SELECT_MENU", new SelectMenuPage());
+    pages.put("UPLOAD_AND_DOWNLOAD_PAGE", new UploadAndDownloadPage());
+    pages.put("DYNAMIC_PROPERTIES_PAGE", new DynamicPropertiesPage());
+
   }
 
   public BasePage getPage(String page){

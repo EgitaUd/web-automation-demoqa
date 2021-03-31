@@ -30,11 +30,12 @@ public class AutoCompletePage extends WidgetsPage{
       case "SINGLE_COLOR_FIELD":
       case "MULTIPLE_COLOR_FIELD":
         // Create a logic that would input the value into given fields, and press (or send) the enter key (Keys.ENTER)
-        //getElement(elementName).click(); Naura rakstītas 3 rindas
-        //getElement(elementName).sendKeys(value);
-       //getElement(elementName).sendKeys(Keys.ENTER);
         WebElementFacade e = getElement(elementName);
-        
+        getElement(elementName).click();
+        getElement(elementName).sendKeys(value);
+        getElement(elementName).sendKeys(Keys.ENTER);
+        // Clicking title to loose focus
+        getElement(AUTO_COMPLETE_TITLE).click();
         break;
       default:
         super.setElementValueTo(elementName, value);
